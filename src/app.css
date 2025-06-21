@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8fafc; /* A very light gray for a soft background */
+        color: theme('colors.gray.700');
+    }
+    @layer base {
+    body {
+        margin: 0;
+    }
+    }
+    .hero-bg {
+        background-color: #007bff; /* A strong, primary blue */
+        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+        background-size: 20px 20px;
+    }
+
+    .btn-primary {
+        @apply bg-white text-blue-600 font-bold py-3 px-8 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:bg-gray-100;
+    }
+
+    .btn-secondary {
+         @apply bg-blue-500 text-white font-bold py-3 px-8 rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:bg-blue-600;
+    }
+
+    .section-title {
+        @apply text-3xl md:text-4xl font-extrabold text-gray-800 mb-8 text-center;
+    }
+
+    .card {
+        @apply bg-white rounded-xl shadow-lg p-6 md:p-8 transition-transform duration-300 hover:-translate-y-2;
+    }
